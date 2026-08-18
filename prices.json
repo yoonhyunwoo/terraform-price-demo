@@ -4,10 +4,20 @@
     "unit": "Keys",
     "cached_at": 1787030196
   },
+  "AWSSecretsManager|location=US East (N. Virginia),usagetype=USE1-AWSSecretsManager-Secrets|Secrets": {
+    "price": 0.4,
+    "unit": "Secrets",
+    "cached_at": 1787030217
+  },
   "AmazonEC2|capacitystatus=Used,instanceType=t3.medium,location=US East (N. Virginia),operatingSystem=Linux,preInstalledSw=NA,tenancy=Shared|": {
     "price": 0.0416,
     "unit": "Hrs",
     "cached_at": 1787030196
+  },
+  "AmazonEC2|capacitystatus=Used,instanceType=t3.micro,location=US East (N. Virginia),operatingSystem=Linux,preInstalledSw=NA,tenancy=Shared|": {
+    "price": 0.0104,
+    "unit": "Hrs",
+    "cached_at": 1787030214
   },
   "AmazonEC2|capacitystatus=Used,instanceType=t3.small,location=US East (N. Virginia),operatingSystem=Linux,preInstalledSw=NA,tenancy=Shared|": {
     "price": 0.0208,
@@ -33,6 +43,11 @@
     "price": 0.171,
     "unit": "Hrs",
     "cached_at": 1787030196
+  },
+  "AmazonRDS|databaseEngine=MySQL,deploymentOption=Single-AZ,instanceType=db.t3.medium,location=US East (N. Virginia)|": {
+    "price": 0.068,
+    "unit": "Hrs",
+    "cached_at": 1787030215
   },
   "AmazonRDS|databaseEngine=MySQL,location=US East (N. Virginia),usagetype=RDS:GP3-Storage|GB-Mo": {
     "price": 0.115,
