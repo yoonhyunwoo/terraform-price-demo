@@ -1,0 +1,42 @@
+{
+  "AWSKMS|location=US East (N. Virginia),usagetype=us-east-1-KMS-Keys|Keys": {
+    "price": 1,
+    "unit": "Keys",
+    "cached_at": 1787030196
+  },
+  "AmazonEC2|capacitystatus=Used,instanceType=t3.medium,location=US East (N. Virginia),operatingSystem=Linux,preInstalledSw=NA,tenancy=Shared|": {
+    "price": 0.0416,
+    "unit": "Hrs",
+    "cached_at": 1787030196
+  },
+  "AmazonEC2|capacitystatus=Used,instanceType=t3.small,location=US East (N. Virginia),operatingSystem=Linux,preInstalledSw=NA,tenancy=Shared|": {
+    "price": 0.0208,
+    "unit": "Hrs",
+    "cached_at": 1787030196
+  },
+  "AmazonEC2|location=US East (N. Virginia),usagetype=NatGateway-Hours|Hrs": {
+    "price": 0.045,
+    "unit": "Hrs",
+    "cached_at": 1787030196
+  },
+  "AmazonEC2|location=US East (N. Virginia),volumeApiName=gp3|GB-Mo": {
+    "price": 0.08,
+    "unit": "GB-Mo",
+    "cached_at": 1787030196
+  },
+  "AmazonElastiCache|cacheEngine=Redis,instanceType=cache.t3.medium,location=US East (N. Virginia),usagetype=NodeUsage:cache.t3.medium|": {
+    "price": 0.068,
+    "unit": "Hrs",
+    "cached_at": 1787030196
+  },
+  "AmazonRDS|databaseEngine=MySQL,deploymentOption=Single-AZ,instanceType=db.m5.large,location=US East (N. Virginia)|": {
+    "price": 0.171,
+    "unit": "Hrs",
+    "cached_at": 1787030196
+  },
+  "AmazonRDS|databaseEngine=MySQL,location=US East (N. Virginia),usagetype=RDS:GP3-Storage|GB-Mo": {
+    "price": 0.115,
+    "unit": "GB-Mo",
+    "cached_at": 1787030196
+  }
+}

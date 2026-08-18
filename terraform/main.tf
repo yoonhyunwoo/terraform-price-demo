@@ -1,5 +1,5 @@
 variable "app_instance_type" {
-  default = "t3.micro"
+  default = "t3.medium"
 }
 
 variable "worker_instance_type" {
@@ -7,11 +7,11 @@ variable "worker_instance_type" {
 }
 
 variable "db_instance_class" {
-  default = "db.t3.medium"
+  default = "db.m5.large"
 }
 
 variable "db_allocated_storage" {
-  default = 50
+  default = 200
 }
 
 resource "aws_vpc" "main" {
@@ -47,7 +47,7 @@ resource "aws_instance" "worker" {
 }
 
 resource "aws_ebs_volume" "data" {
-  size       = 200
+  size       = 500
   type       = "gp3"
   availability_zone = "ap-northeast-2a"
 }
@@ -67,10 +67,6 @@ resource "aws_s3_bucket" "artifacts" {
   bucket = "tfprice-demo-artifacts"
 }
 
-resource "aws_secretsmanager_secret" "db" {
-  name = "demo/db"
-}
-
 resource "aws_kms_key" "app" {}
 
 resource "aws_launch_template" "web" {
@@ -79,11 +75,22 @@ resource "aws_launch_template" "web" {
 }
 
 resource "aws_autoscaling_group" "web" {
-  desired_capacity = 2
-  min_size         = 2
-  max_size         = 4
+  desired_capacity = 4
+  min_size         = 4
+  max_size         = 6
   launch_template {
     id      = aws_launch_template.web.id
     version = "$Latest"
   }
+}
+
+resource "aws_elasticache_cluster" "cache" {
+  cluster_id      = "demo-cache"
+  engine          = "redis"
+  node_type       = "cache.t3.medium"
+  num_cache_nodes = 2
+}
+
+resource "aws_sqs_queue" "events" {
+  name = "demo-events"
 }
