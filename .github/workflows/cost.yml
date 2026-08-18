@@ -19,3 +19,4 @@ jobs:
         with:
           directory: terraform/
           baseline-ref: ${{ github.base_ref }}
+          price-file: prices.json
